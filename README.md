@@ -1,7 +1,5 @@
 # CMS Detection PHP
 
-## Description
-
 This project is a simple **CMS Detection Tool** written in PHP. It allows users to detect the Content Management System (CMS) used by a website, such as WordPress, Joomla, Drupal, Magento, or PrestaShop. The detection is based on unique patterns in the website's structure, including specific paths, files, and content associated with different CMS platforms.
 
 ## Features
