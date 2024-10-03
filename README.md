@@ -18,7 +18,7 @@ This project is a simple **CMS Detection Tool** written in PHP. It allows users 
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/el14m3/detect-cms.git
+   git clone https://github.com/el14m3/CMS_Detection.git
    ```
 2. Open the `detectCMS.php` file and replace the `$url` variable with the website URL you want to check.
    
