@@ -3,20 +3,27 @@
     Developer: el14m3
     Country: Morocco
 */
+
 function detectCMS($url) {
     // Array of common CMS signatures
     $cmsList = [
         'WordPress' => '/wp-content|wp-includes|wp-admin/',
         'Joomla' => '/Joomla|joomla|index.php\?option=com/',
         'Drupal' => '/sites\/default\/files|drupal/',
-        'Magento' => '/static\/version|mage|magento/',
-        'PrestaShop' => '/prestashop|ps_|modules\/ps_|classes\/PS_|AdminPrestashop/'
+        //'Magento' => '/static\/version|mage|magento/',
+        'PrestaShop' => '/prestashop|ps_|modules\/ps_|classes\/PS_|AdminPrestashop/',
+        'Laravel' => '/\/storage\/|\.php$/',
+        'Next.js' => '/__next__|next\/static/',
+        'Node.js' => '/node_modules|Express/',
+        'React.js' => '/react\.js|static\/js/'
     ];
 
-    // Initialize curl to fetch headers and page content
+    // Initialize cURL to fetch headers and page content
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+    // Fetch the page content
     $response = curl_exec($ch);
     curl_close($ch);
 
@@ -35,6 +42,5 @@ function detectCMS($url) {
 }
 
 // Example usage
-$url = "https://example.com";  // Replace with the URL you want to check
+$url = "https://www.example.ma/";  // Replace with the URL you want to check
 echo detectCMS($url);
-?>
