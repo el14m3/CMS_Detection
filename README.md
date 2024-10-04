@@ -32,10 +32,12 @@ Flexible Usage: Can be easily integrated or modified for various applications.
 2. Open the `detectCMS.php` file and replace the `$url` variable with the website URL you want to check.
    
 ## Requirements
-PHP 7.0 or higher
-cURL extension enabled in PHP
+
+- PHP 7.0 or higher
+- cURL extension enabled in PHP
 
 ## Installation
+
 ```bash
 Copy the provided PHP code into a new file, e.g., detectCMS.php.
 Ensure that the server has cURL enabled.
